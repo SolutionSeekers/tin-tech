@@ -1,0 +1,4 @@
+[submodule "extra-modules/product-attribute"]
+	path = extra-modules/product-attribute
+	url = https://github.com/OCA/product-attribute.git
+	branch = 13.0
