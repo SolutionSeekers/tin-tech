@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="account_analytic_form_fields" model="ir.ui.view">
+      <field name="name">account.analytic.form.fields</field>
+      <field name="model">account.analytic.account</field>
+      <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//group[@name='main']/group/field[@name='partner_id']" position="after">
+            <field name="proyecto"/>
+            <field name="identificador"/>
+        </xpath>
+      </field>
+  </record>
+
+  <record id="account_analytic_line_fields" model="ir.ui.view">
+      <field name="name">account.analytic.line.fields</field>
+      <field name="model">account.analytic.line</field>
+      <field name="inherit_id" ref="analytic.view_account_analytic_line_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="/form/sheet/group//field[@name='company_id']" position="after">
+            <field name="proyecto_rel"/>
+            <field name="identificador_rel"/>
+        </xpath>
+      </field>
+  </record>
+</odoo>
