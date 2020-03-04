@@ -23,9 +23,13 @@
     "depends": [
         "stock_account",
         "analytic",
+        'web',
+	'sale',
     ],
     "data": [
         'views/account_analytic.xml',
+        'views/external_layout.xml',
+	'views/saleorder_views.xml',
     ],
     'installable': True,
 }
