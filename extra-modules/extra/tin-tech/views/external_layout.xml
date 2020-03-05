@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="external_layout_boxed_mr" inherit_id="web.external_layout_boxed">
+        <xpath expr="//img" position="replace">
+            <img t-if="company.logo" width="425" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
+        </xpath>
+	    <xpath expr="//div[@name='company_address']/span[1]" position="after">
+            <span t-field="company.vat"/>	
+	    </xpath>
+        <xpath expr="//div[@class='footer o_boxed_footer']/div/ul/li[4]" position="replace">
+            <li></li>
+        </xpath>
+    </template>
+</odoo>
